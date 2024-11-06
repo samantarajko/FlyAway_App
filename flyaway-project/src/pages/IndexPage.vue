@@ -1,11 +1,18 @@
 <template>
   <q-page class="flex flex-center">
-    <q-btn 
-      label="Go to Login" 
-      color="primary" 
-      @click="goToLogin" 
-      class="q-mt-md"
-    />
+    <!-- Wrapper div for buttons to prevent overlap and ensure they're aligned -->
+    <div class="q-gutter-md flex">
+      <q-btn 
+        label="Go to Login" 
+        color="primary" 
+        @click="goToLogin"
+      />
+      <q-btn 
+        label="About Us" 
+        color="secondary" 
+        @click="goToAboutUs"
+      />
+    </div>
   </q-page>
 </template>
 
@@ -16,6 +23,10 @@ const router = useRouter();
 
 function goToLogin() {
   router.push('/login');
+}
+
+function goToAboutUs() {
+  router.push('/about-us');
 }
 
 defineOptions({
