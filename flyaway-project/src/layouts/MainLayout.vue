@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lHh Lpr lFf" class="main-layout">
     <q-header elevated>
       <q-toolbar>
         <q-btn
@@ -25,12 +25,8 @@
       bordered
     >
       <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
-
+        <q-item-label header>Essential Links</q-item-label>
+        
         <EssentialLink
           v-for="link in linksList"
           :key="link.title"
@@ -55,46 +51,46 @@ defineOptions({
 
 const linksList = [
   {
-    title: 'Docs',
+    title: 'Pretraživanje',
     caption: 'quasar.dev',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: ''
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
+    title: 'Logiraj se',
+    caption: 'nez kako linkattt',
     icon: 'code',
-    link: 'https://github.com/quasarframework'
+    link: ''
   },
   {
-    title: 'Discord Chat Channel',
+    title: 'Registriraj se',
     caption: 'chat.quasar.dev',
     icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    link: '/Register'
   },
   {
-    title: 'Forum',
+    title: 'Upoznaj nas',
     caption: 'forum.quasar.dev',
     icon: 'record_voice_over',
     link: 'https://forum.quasar.dev'
   },
   {
-    title: 'Twitter',
+    title: 'Naslovnica',
     caption: '@quasarframework',
     icon: 'rss_feed',
     link: 'https://twitter.quasar.dev'
   },
   {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
+    title: 'Česta pitanja',
+    caption: '@FlyAwayAPP',
     icon: 'public',
-    link: 'https://facebook.quasar.dev'
+    link: 'https://facebook.com'
   },
   {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
+    title: 'Naša lokacija',
+    caption: '@FlyAwayapp',
     icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
+    link: 'https://instagram.com'
   }
 ]
 
@@ -104,3 +100,16 @@ function toggleLeftDrawer () {
   leftDrawerOpen.value = !leftDrawerOpen.value
 }
 </script>
+
+<style scoped>
+.main-layout {
+  /* gradient pozadina */
+  background: linear-gradient(135deg, #3397a6, #4646a7, #9c284f);
+  height: 100vh;
+  color: rgb(0, 0, 0);
+}
+
+.q-page-container {
+  padding-top: 2rem;
+}
+</style>

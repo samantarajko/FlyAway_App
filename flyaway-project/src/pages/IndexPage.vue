@@ -3,12 +3,17 @@
     <!-- Wrapper div for buttons to prevent overlap and ensure they're aligned -->
     <div class="q-gutter-md flex">
       <q-btn 
-        label="Go to Login" 
+        label="Logiraj se" 
         color="primary" 
         @click="goToLogin"
       />
       <q-btn 
-        label="About Us" 
+        label="Registriraj se" 
+        color="primary" 
+        @click="goToRegisterMe"
+      />
+      <q-btn 
+        label="Više" 
         color="secondary" 
         @click="goToAboutUs"
       />
@@ -27,6 +32,10 @@ function goToLogin() {
 
 function goToAboutUs() {
   router.push('/about-us');
+}
+
+function goToRegisterMe() {
+  router.push('/register');
 }
 
 defineOptions({
