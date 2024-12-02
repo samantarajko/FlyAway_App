@@ -6,10 +6,10 @@ const routes = [
       { path: '', component: () => import('pages/IndexPage.vue') },
       { path: '/login', component: () => import('pages/LogInPage.vue') },
       { path: '/about-us', component: () => import('pages/AboutUsPage.vue') },
-      { path: '/qa', component: () => import('pages/QA.vue') }, // Česta pitanja
-      { path: '/team', component: () => import('pages/Team.vue') }, // Upoznaj team
-      { path: '/travel', component: () => import('pages/Travel.vue') }, // Putovanja
-      { path: '/register', component: () => import('pages/RegisterMe.vue')} // Registracija
+      { path: '/qa', component: () => import('src/pages/PitanjaPage.vue') }, // Česta pitanja
+      { path: '/team', component: () => import('src/pages/TimPage.vue') }, // Upoznaj team
+      { path: '/travel', component: () => import('src/pages/PutovanjaPage.vue') }, // Putovanja
+      { path: '/register', component: () => import('src/pages/RegistracijaPage.vue')} // Registracija
     ]
   },
 

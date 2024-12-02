@@ -5,7 +5,7 @@
           <q-card-section>
             <q-btn
               flat
-              label="Back"
+              label="Natrag"
               icon="arrow_back"
               color="primary"
               @click="goBack"
@@ -14,7 +14,7 @@
             <div class="text-h5 text-primary">Upoznaj naš tim</div>
             <p>Saznaj nešto o nama:</p>
           </q-card-section>
-  
+
           <!-- Članovi tima -->
           <q-list bordered separator>
             <q-expansion-item
@@ -35,7 +35,7 @@
       </div>
     </q-page>
   </template>
-  
+
   <script>
   export default {
     name: 'UpoznajTim',
@@ -71,7 +71,7 @@
     }
   }
   </script>
-  
+
   <style scoped>
   .team-container {
     max-width: 600px;

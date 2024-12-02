@@ -1,1 +1,9 @@
 // app global css in SCSS form
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-image: url("/pictures/pozadinaa.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Ensures background stays in place */
+}

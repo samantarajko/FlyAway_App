@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf" class="main-layout">
+  <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
         <q-btn
@@ -10,23 +10,18 @@
           aria-label="Menu"
           @click="toggleLeftDrawer"
         />
-
-        <q-toolbar-title>
-          FLY AWAY APP
+        <q-toolbar-title class="">
+          <q-toolbar-title> <h4>IZBORNIK</h4> </q-toolbar-title>
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label header>Essential Links</q-item-label>
-        
+        <q-item-label header> Essential Links </q-item-label>
+
         <EssentialLink
           v-for="link in linksList"
           :key="link.title"
@@ -42,74 +37,55 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
+import { ref } from "vue";
+import EssentialLink from "components/EssentialLink.vue";
 
 defineOptions({
-  name: 'MainLayout'
-})
+  name: "MainLayout",
+});
 
 const linksList = [
   {
-    title: 'Pretraživanje',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: ''
+    title: "Upoznaj tim",
+    caption: "Upoznajte naš tim!",
+    icon: "menu_book",
+    link: "/team",
   },
   {
-    title: 'Logiraj se',
-    caption: 'nez kako linkattt',
-    icon: 'code',
-    link: ''
+    title: "Pretraživanje",
+    caption: "Pretražite putovanja",
+    icon: "search",
+    link: "/",
   },
   {
-    title: 'Registriraj se',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: '/Register'
+    title: "Pitanja",
+    caption: "FAQ - često postavljena pitanja",
+    icon: "info",
+    link: "/qa",
   },
   {
-    title: 'Upoznaj nas',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
+    title: "Sljedeća putovanja",
+    caption: "Otkrite gdje sljedeće putujemo",
+    icon: "place",
+    link: "/travel",
   },
   {
-    title: 'Naslovnica',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
+    title: "Registracija",
+    caption: "Prijavite se kao novi korisnik",
+    icon: "person_add",
+    link: "/register",
   },
   {
-    title: 'Česta pitanja',
-    caption: '@FlyAwayAPP',
-    icon: 'public',
-    link: 'https://facebook.com'
+    title: "Login",
+    caption: "Prijavite se u sustav",
+    icon: "login",
+    link: "/login",
   },
-  {
-    title: 'Naša lokacija',
-    caption: '@FlyAwayapp',
-    icon: 'favorite',
-    link: 'https://instagram.com'
-  }
-]
+];
 
-const leftDrawerOpen = ref(false)
+const leftDrawerOpen = ref(false);
 
-function toggleLeftDrawer () {
-  leftDrawerOpen.value = !leftDrawerOpen.value
+function toggleLeftDrawer() {
+  leftDrawerOpen.value = !leftDrawerOpen.value;
 }
 </script>
-
-<style scoped>
-.main-layout {
-  /* gradient pozadina */
-  background: linear-gradient(135deg, #3397a6, #4646a7, #9c284f);
-  height: 100vh;
-  color: rgb(0, 0, 0);
-}
-
-.q-page-container {
-  padding-top: 2rem;
-}
-</style>

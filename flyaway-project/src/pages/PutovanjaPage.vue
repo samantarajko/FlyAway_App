@@ -5,7 +5,7 @@
           <q-card-section>
             <q-btn
               flat
-              label="Back"
+              label="Natrag"
               icon="arrow_back"
               color="primary"
               @click="goBack"
@@ -14,7 +14,7 @@
             <div class="text-h5 text-primary">Gdje dalje putujemo?</div>
             <p>Istražite neka nevjerojatna odredišta za svoju sljedeću avanturu!</p>
           </q-card-section>
-  
+
           <!-- Travel Destinations List -->
           <q-list bordered separator>
             <q-item
@@ -35,7 +35,7 @@
       </div>
     </q-page>
   </template>
-  
+
   <script>
   export default {
     name: 'TravelEu',
@@ -71,7 +71,7 @@
     }
   }
   </script>
-  
+
   <style scoped>
   .travel-container {
     max-width: 600px;
@@ -79,4 +79,3 @@
     margin-top: 10vh;
   }
   </style>
-  

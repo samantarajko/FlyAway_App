@@ -1,20 +1,19 @@
 <template>
   <q-page class="flex flex-center">
-    <!-- Wrapper div for buttons to prevent overlap and ensure they're aligned -->
     <div class="q-gutter-md flex">
-      <q-btn 
-        label="Logiraj se" 
-        color="primary" 
+      <q-btn
+        label="Logiraj se"
+        color="primary"
         @click="goToLogin"
       />
-      <q-btn 
-        label="Registriraj se" 
-        color="primary" 
+      <q-btn
+        label="Registriraj se"
+        color="primary"
         @click="goToRegisterMe"
       />
-      <q-btn 
-        label="Više" 
-        color="secondary" 
+      <q-btn
+        label="Više"
+        color="secondary"
         @click="goToAboutUs"
       />
     </div>
